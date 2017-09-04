@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Cannadata Front-Desk Web App</title>
+    <script src="https://use.fontawesome.com/3b3ccf58ea.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+  </head>
+  <body>
+
+        <!--static top bar-->
+         <div id="header">        
+            <nav class="navbar navbar-default">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    </div>
+                
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#">Link</a></li>
+                        <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Logout</a></li>
+                        </ul>
+                        </li>
+                    </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <!--main content-->
+        <div id="content">
+            <div class="row">
+
+                <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8"> 
+                <!--Cart Items List-->
+                    <div class="row">                
+                        <div class="table-container cart-card">
+                            <div class="table-title-and-icon"> 
+                                <h3>Shopping Cart: 3 items</h3>
+                                <i class="fa fa-search fa-2x table-icons" id="search-items"></i> 
+
+                                    <!-- The Modal -->
+                                    <div id="search-modal" class="modal">
+                                        <!-- Modal content -->
+                                        <div class="modal-content">
+                                            <span class="close">&times;</span>
+                                            <div class="modal-search-bar">
+                                                <div class="input-group stylish-input-group">
+                                                    <input type="text" class="form-control"  placeholder="Search Items" >
+                                                    <span class="input-group-addon">
+                                                        <button type="submit">
+                                                            <span class="glyphicon glyphicon-search"></span>
+                                                        </button>  
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="modal-item-list">
+                                                <div>
+                                                    <table class="table table-hover">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="add-to-cart">
+                                                                        <i id="add-to-cart" class="fa fa-plus-circle fa-2x" aria-hidden="true"></i>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="media">
+                                                                        <a href="product-info.html" class="pull-left">
+                                                                            <img src="https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg"  class="media-photo">
+                                                                        </a>
+                                                                        <div class="media-body">
+                                                                            <h5 class="title">Item Name</h5>
+                                                                            <p class="description">Here goes the description for the banana weed.</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td>Banana Strain</td>
+                                                                <td>Sativa</td>
+                                                                <td>Concentrate</td>
+                                                                <td>100THC</td>
+                                                                <td>50CDB</td>
+                                                                <td class="modal-usd-icon"><a href="#"><i class="fa fa-usd fa-lg"></i></a></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!--END Modal-->
+
+                                <i class="fa fa-barcode fa-2x table-icons"></i>
+                            </div>
+
+                            <!--dropdown select patient-->
+                            <div class="dropdown patient-dropdown">
+                                <button class="btn btn-default dropdown-toggle patient-btn" type="button" id="select-patient" data-toggle="dropdown">Select Patient
+                                <span class="caret"></span></button>
+                                <ul class="dropdown-menu select-dropdown-menu" role="menu" aria-labelledby="menu1">
+                                    <li role="presentation"><a role="menuitem" href="#">Sally Smith</a></li>
+                                    <li role="presentation"><a role="menuitem" href="#">John Clark</a></li>
+                                    <li role="presentation"><a role="menuitem" href="#">Nelly Anaya</a></li>
+                                </ul>
+                            </div>
+
+                            <!--shopping cart-->
+                            <table class="table table-style cart-table">
+                                <thead class="cart-header">
+                                    <th style="width:20%;">Item</th>
+                                    <th style="text-align:center;">Price</th>
+                                    <th style="text-align:center;">Quantity</th>
+                                    <th style="text-align:center;">Discount%</th>
+                                    <th style="text-align:center;">Subtotal</th>
+                                    <th style="width:10%;"></th>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Banana Items Name</td>
+                                        <td style="text-align:center;">$20.00</td>
+                                        <td style="text-align:center;"><input type="text" class="form-control text-center cart-input" name="num-items"></td>
+                                        <td style="text-align:center;"><input type="text" class="form-control text-center cart-input" name="discount"></td>
+                                        <td style="text-align:center;">$18.00</td>
+                                        <td style="text-align:center;"><a href="#"><i class="fa fa-times" aria-hidden="true"></i></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Banana Items Name</td>
+                                        <td style="text-align:center;">$20.00</td>
+                                        <td style="text-align:center;"><input type="text" class="form-control text-center cart-input" name="num-items"></td>
+                                        <td style="text-align:center;"><input type="text" class="form-control text-center cart-input" name="discount"></td>
+                                        <td style="text-align:center;">$18.00</td>
+                                        <td style="text-align:center;"><a href="#"><i class="fa fa-times" aria-hidden="true"></i></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Banana Items Name</td>
+                                        <td style="text-align:center;">$20.00</td>
+                                        <td style="text-align:center;"><input type="text" class="form-control text-center cart-input" name="num-items"></td>
+                                        <td style="text-align:center;"><input type="text" class="form-control text-center cart-input" name="discount"></td>
+                                        <td style="text-align:center;">$18.00</td>
+                                        <td style="text-align:center;"><a href="#"><i class="fa fa-times" aria-hidden="true"></i></a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!--Patient Info-->
+                    <div class="row">
+                        <div class="table-container">
+                            <div class="table-title-and-icon"> 
+                                <h3>Patient Summary</h3>
+                                <a href="#"><i class="fa fa-eye fa-2x table-icons"></i></a>
+                            </div>
+
+                            <div class="countdown-container cart-countdown">
+                                <h2>93</h2>
+                                <p>days until medical card expires.</p>
+                            </div>
+                            <table class="table table-sm table-style">
+                                <tbody>
+                                <tr>
+                                <th scope="row">First Name:</th>
+                                <td>John</td>
+                                </tr>
+                                <tr>
+                                <th scope="row">Last Name:</th>
+                                <td>Smith</td>
+                                </tr>
+                                <tr>
+                                <th scope="row">DOB:</th>
+                                <td>1/1/1111</td>
+                                </tr>
+                                <tr>
+                                <th scope="row">California ID:</th>
+                                <td colspan="2">123456789</td>
+                                </tr>
+                                <tr>
+                                <th scope="row">Address:</th>
+                                <td colspan="2">123 Some Street</td>
+                                </tr>
+                                <tr>
+                                <th scope="row">City:</th>
+                                <td colspan="2">Nashville</td>
+                                </tr>
+                                <tr>
+                                <th scope="row">Zip:</th>
+                                <td colspan="2">27000</td>
+                                </tr>
+                                <tr>
+                                <th scope="row">Phone:</th>
+                                <td colspan="2">615-579-7903</td>
+                                </tr>
+                                <tr>
+                                <th scope="row">Email:</th>
+                                <td colspan="2">john@gmail.com</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!--Patient Documents-->
+                    <div class="row">
+                        <div class="table-container documents">
+                            <div class="table-title-and-icon"> 
+                                <h3>Patient Documents</h3>
+                            </div>
+                            <img src="images/nellyah.JPG" class="img-thumbnail" width="150" height="150"> 
+                            <img src="images/nellyah.JPG" class="img-thumbnail" width="150" height="150"> 
+
+
+                            <div class="modal fade" id="enlargeImageModal" tabindex="-1" role="dialog" aria-labelledby="enlargeImageModal" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg" role="document">
+                                      <div class="modal-content">
+                                        <div class="modal-header">
+                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                        </div>
+                                        <div class="modal-body">
+                                          <img src="" class="enlargeImageModalSource" style="width: 100%;">
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+                                
+                        </div>
+                    </div>
+            </div>
+
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    <div class="row">
+                        <div class="table-container">
+                            <table class="table table-style cart-reciept">
+                                <tbody>
+                                    <tr>
+                                        <td><h5><strong>Subtotal</strong></h5></td>
+                                        <td class="reciept-numbers"><h5>$24.00</h5></td>
+                                    </tr>
+                                    <tr>
+                                        <td><h5><strong>Discounts</strong></h5></td>
+                                        <td class="reciept-numbers"><h5>-$10.00</h5></td>
+                                    </tr>
+                                    <tr>
+                                        <td><h5><strong>Tax</strong></h5></td>
+                                        <td class="reciept-numbers"><h5>$8.00</h5></td>
+                                    </tr>
+                                    <tr>
+                                        <td><h4><strong>TOTAL</strong></h4></td>
+                                        <td class="reciept-numbers"><h4>$60.00</h4></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border-bottom: none;"><h5><strong>Add Payment</strong></h5></td>
+                                        <td style="border-bottom: none;"> </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border-bottom: none;"><a class="btn btn-success" href="#"><i class="fa fa-money fa-lg" aria-hidden="true"></i>Cash</a></td>
+                                        <td style="border-bottom: none;" class="reciept-numbers"><h5>$0.00</h5></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border-bottom: none;"><a class="btn btn-success" href="#"><i class="fa fa-credit-card fa-lg" aria-hidden="true"></i>Card</a></td>
+                                        <td style="border-bottom: none;" class="reciept-numbers"><h5>$0.00</h5></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="end-sale-btn-container">
+                                <a class="btn btn-success end-sale-btn" href="#">End Sale</a>
+                                <a class="btn btn-danger cancel-sale-btn" href="#">Cancel Sale</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>  
+    <script  type="text/javascript" src="side-navbar.js"></script>
+    <script  type="text/javascript" src="search-items.js"></script>
+    <script  type="text/javascript" src="enlarge-photo.js"></script>
+  </body>
+</html>

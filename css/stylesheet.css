@@ -1,0 +1,422 @@
+@font-face {
+    font-family: DinLight;
+    src: url(../font/din_light.ttf);
+}
+
+@font-face {
+    font-family: DinMedium;
+    src: url(../font/din_medium.ttf);
+}
+
+body {
+    font-family: DinLight;
+    background-color: #061726;
+    /*overflow: none;*/
+}
+
+#header{
+   position:fixed; 
+   z-index: 5;
+   width: 100%;
+}
+
+.navbar {
+    height: 50px;
+    margin-bottom: 0px;
+    border: none;
+    border-radius: 0;
+}
+
+.sidebar-nav-list li {
+    font-family: DinMedium;
+    color: white;
+    list-style: none;
+}
+
+div#content {
+    background:#061726; 
+    padding: 70px 15px 0px 15px;
+}
+
+.table {
+    margin-bottom: 0;
+    margin-left: auto;
+	margin-right: auto;
+	/*max-width: 1000px;*/
+	float: none;
+}
+
+.table-container {
+    background-color: #1C2C39;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 0px 15px 20px 15px
+}
+
+.table-title-and-icon {
+    display: inline-block;
+    padding: 0px 0px 20px 0px;
+    width: 100%;
+}
+
+.table-icons {
+    float: right;
+    color: #5cb85c;
+}
+
+.table-title-and-icon i:hover {
+    color: #449d44;
+}
+
+.table-container h3 {
+    font-family: DinMedium;
+    font-size: 25px;
+    text-align: center;
+    color: white;
+    padding: 0px;
+    float: left;
+    margin: 0;
+}
+
+.table-style {
+    font-family: DinLight;
+    color: white;
+    font-size: 13px;
+}
+
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+    border-bottom: 1px solid rgba(255, 255, 255, .10);
+    vertical-align: bottom;
+}
+
+.table>tbody>tr>th, .table>tbody>tr>td {
+    border-top: none;
+}
+
+th {
+    font-family: DinMedium;
+    width: 30%;
+}
+
+.icon-bar {
+    width: 100%;
+}
+
+.icon-bar li {
+    list-style: none;
+}
+
+.icon-bar ul {
+    padding: 0;
+    margin: 0;
+}
+
+.icon-bar a {
+    display: block;
+    text-align: center;
+    margin: 0px 10px 20px 10px;
+    transition: all 0.5s ease;
+    color: white;
+    font-size: .8em;
+}
+
+.icon-bar img {
+    margin-bottom: 8px;
+}
+
+.index-btn {
+    font-family: DinMedium;
+    font-size: 12px;
+    border-radius: 8px;
+    border: none;
+    width: 90px;
+    height: 28px;
+}
+
+.countdown-container {
+    /*display: inline-block;*/
+    background-color: #009933;
+    color: white;
+    margin: 0px 20px 20px 20px;
+    padding: 10px;
+    text-align: center;
+}
+
+.countdown-container h2, p{
+    margin: 0;
+    font-size: 16px;
+}
+
+.countdown-container h2 {
+    font-size: 38px;
+}
+
+.view-link {
+    color: #99cc33;
+}
+
+td a:hover {
+    color: white;
+}
+
+.cart-container {
+    max-height: 400px;
+    max-width: 450px;
+}
+.cart-table {
+    font-size: 14px;
+}
+.cart-table th {
+    width: 15%;
+    color: white;
+}
+
+.cart-table .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+    padding: 10px;
+}
+
+.cart-header {
+    background-color: #061726;
+}
+
+.fa-barcode {
+    margin-right: 20px;
+}
+
+.fa-times {
+    color: #bf211e;
+}
+
+.cart-input {
+    height: 25px;
+    width: 90%;
+    font-size: 13px;
+    display: initial;
+}
+
+.cart-countdown {
+    margin: 0px 0px 20px 0px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 30px;
+    border: 1px solid #888;
+    width: 90%;
+}
+
+.modal-search-bar {
+    padding: 15px 0px 15px 0px;
+    margin-bottom: 20px;
+}
+
+.input-group, .stylish-input-group {
+    width: 60%;
+}
+.stylish-input-group .input-group-addon{
+    background: white !important; 
+}
+.stylish-input-group .form-control{
+	border-right:0; 
+	box-shadow:0 0 0; 
+	border-color:#ccc;
+}
+.stylish-input-group button{
+    border:0;
+    background:transparent;
+}
+
+.input-group-addon {
+    padding: 0px 12px;
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.add-to-cart {
+    position: relative;
+    top: -11px;
+    color: #5cb85c;
+}
+
+.media-photo {
+    width: 50px;
+    margin: 10px 0 0 0;
+}
+
+.media-body {
+    width: 0%;
+    overflow: initial;
+}
+
+.modal-item-list table tbody tr td {
+    border-top: 0.5px solid rgba(0, 0, 0, 0.20);
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.20)
+}
+
+.documents img {
+    cursor: zoom-in;
+}
+
+.modal-backdrop {
+    z-index: 0;
+}
+
+.img-thumbnail {
+    padding: 0px;
+    margin-right: 10px;
+    border: none;
+}
+
+.reciept-containers {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.20);
+}
+
+.reciept-numbers {
+    text-align: right;
+}
+
+.fa-money, .fa-credit-card {
+    color: white;
+    margin-right: 10px;
+}
+
+.end-sale-btn-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+   margin-top: 30px;
+}
+
+.end-sale-btn {
+    margin-right: 15px;
+}
+
+.cancel-sale-btn, .cancel-sale-btn:active, .cancel-sale-btn:focus{
+    background-color: #c9302c;
+    border-color: #c9302c;
+}
+
+.cancel-sale-btn:hover {
+    background-color: #bf211e;
+    border-color: #bf211e;
+}
+
+.modal-usd-icon a{
+    color: #5cb85c;
+} 
+
+.patient-dropdown {
+    margin-top: 0px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.patient-btn, .dropdown-menu {
+    border-radius: 5px;
+    width: 60%;
+    text-align: center;
+}
+
+.select-dropdown-menu {
+    left: 50% !important;
+    right: auto !important;
+    text-align: center !important;
+    transform: translate(-50%, 0) !important;
+}
+
+
+/* Portrait */
+@media only screen 
+and (min-device-width: 768px) 
+and (max-device-width: 1024px) 
+and (orientation: portrait) 
+and (-webkit-min-device-pixel-ratio: 1) {
+
+    .table-container {
+        padding: 12px;
+        margin: 0px 10px 30px 15px;
+    }
+
+    .cart-table {
+        font-size: 11px;
+    }
+
+    .cart-reciept {
+        font-size: 12px;
+    }
+
+    .end-sale-btn-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+    }
+    
+    .end-sale-btn {
+        margin-right: 15px;
+        width: 45%;
+    }
+
+    .cancel-sale-btn {
+        width: 45%;
+    }
+
+    .btn, .end-sale-btn, .cancel-sale-btn {
+        font-size: 12px;
+        padding: 6px 8px;
+    }
+
+    .countdown-container h2, p{
+        margin: 0;
+        font-size: 12px;
+    }
+    
+    .countdown-container h2 {
+        font-size: 15px;
+    }
+    
+    .media-body h5 {
+        margin-bottom: 17px;
+    }
+
+    .modal-item-list .table>tbody>tr>td {
+        padding: 4px;
+        font-size: 10px;
+    }
+
+    
+
+
+}
+
